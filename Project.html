@@ -42,11 +42,37 @@
             font-weight: 400;
             color: aquamarine;
         }
+
+        #button{
+            color: blue;
+            background-color: cadetblue;
+        }
     </style>
     <p id="demo"></p>
     <p id="demo1"></p>
+
+    <button id="button" onclick="ascending()">Up</button>
+    <br>
+    <button id="button" onclick="descending()">Down</button>
     <script>
-       
+       var value = [5, 10, 20, 40];
+
+        document.getElementById("demo").innerHTML = value;
+      
+
+
+        function ascending(){
+            value.sort(function (a, b) { return (a - b) });
+
+            document.getElementById("demo").innerHTML = value;
+        }
+        function descending(){
+
+            value.sort(function (a, b) { return (b - a) });
+
+            document.getElementById("demo").innerHTML = value;
+        }
+
 
 
     </script>
